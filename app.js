@@ -44,7 +44,7 @@ switch(admin){
         alert("No sos un Admin")
     break
 } 
-*/
+
 
 
 //calculos
@@ -94,6 +94,7 @@ const plazoFijo = (banco, monto) => {
     
     let interesM
     let interesTNA
+    
     switch(banco.toLowerCase()){
         case "santander":
         case "galicia":
@@ -124,6 +125,70 @@ const pedirDatos = () => {
     let banco1 = prompt("Ingrese el banco a calcular: santander, galicia, bbva, hsbc, icbc ,bancoNacion, provincia, marcro, credicoop, ciudad").toLowerCase()
     let monto1 = parseInt(prompt("Ingrese monto a calcular"))
     return plazoFijo(banco1, monto1)
+} 
+
+console.log( pedirDatos())
+
+*/
+
+class Monotributo{
+    constructor(tipo, ingresos, supAfectada, energiaConsumidaAnual, alquileresDevengados ){
+        this.tipo = tipo;
+        this.ingresos = ingresos;
+        this.supAfectada = supAfectada;
+        this.energiaConsumidaAnual = energiaConsumidaAnual;
+        this.alquileresDevengados = alquileresDevengados;
+    }
+
+    get obtenerTipo() {
+        return this.tipo
+    }
+    set cambiarTipo(nuevoTipo) {
+        return this.tipo = nuevoTipo
+    }
+    get obtenerIngresos() {
+        return this.ingresos
+    }
+    set cambiarIngresos(nuevoIngresos) {
+        return this.ingresos = nuevoIngresos
+    }
+    get obtenerSupAfectada() {
+        return this.supAfectada
+    }
+    set cambiarSupAfectada(nuevosSupAfectada) {
+        return this.supAfectada = nuevosSupAfectada
+    }
+    get obtenerEnergiaConsumidaAnual() {
+        return this.EnergiaConsumidaAnual
+    }
+    set cambiarEnergiaConsumidaAnual(nuevoEnergiaConsumidaAnual) {
+        return this.energiaConsumidaAnual = EnergiaConsumidaAnual
+    }
+    get obtenerAlquileresDevengados() {
+        return this.alquileresDevengados
+    }
+    set cambiarAlquileresDevengados(nuevoAlquileresDevengados) {
+        return this.alquileresDevengados = nuevoAlquileresDevengados
+    }
+
+}
+
+let monotributoA = new Monotributo ("Categoria A", "$ 370.000,00", "Hasta 30 m2", "Hasta 3330 Kw", "$ 105.916,77"  )
+let monotributoB = new Monotributo ("Categoria B", "$ 550.000,000", "Hasta 45 m2", "Hasta 5000 Kw", "$ 105.916,77"  )
+let monotributoC = new Monotributo ("Categoria C", "$ 770.000,00", "Hasta 60 m2", "Hasta 6700 Kw", "$ 211.833,52"   )
+let monotributoD = new Monotributo ("Categoria D", "$ 1.060.000,00", "Hasta 85 m2", "Hasta 10000 Kw", "$ 211.833,52")
+let monotributoE = new Monotributo ("Categoria E", "$ 1.400.000,00", "Hasta 110 m2", "Hasta 13000 Kw", "$ 263.951,28")
+
+
+
+
+
+const pedirDatos = () => {
+    
+    let cat = prompt("Ingrese Su categoria de Monotributo: A, B, C, D, E").toUpperCase()
+    let monotributo = "monotributo" + cat
+    return "Datos según tu categoría: " + monotributo 
+    
 } 
 
 console.log( pedirDatos())
