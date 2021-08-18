@@ -144,31 +144,31 @@ class Monotributo{
         return this.tipo
     }
     set cambiarTipo(nuevoTipo) {
-        return this.tipo = nuevoTipo
+        this.tipo = nuevoTipo
     }
     get obtenerIngresos() {
         return this.ingresos
     }
     set cambiarIngresos(nuevoIngresos) {
-        return this.ingresos = nuevoIngresos
+        this.ingresos = nuevoIngresos
     }
     get obtenerSupAfectada() {
         return this.supAfectada
     }
     set cambiarSupAfectada(nuevosSupAfectada) {
-        return this.supAfectada = nuevosSupAfectada
+        this.supAfectada = nuevosSupAfectada
     }
     get obtenerEnergiaConsumidaAnual() {
         return this.EnergiaConsumidaAnual
     }
     set cambiarEnergiaConsumidaAnual(nuevoEnergiaConsumidaAnual) {
-        return this.energiaConsumidaAnual = EnergiaConsumidaAnual
+        this.energiaConsumidaAnual = EnergiaConsumidaAnual
     }
     get obtenerAlquileresDevengados() {
         return this.alquileresDevengados
     }
     set cambiarAlquileresDevengados(nuevoAlquileresDevengados) {
-        return this.alquileresDevengados = nuevoAlquileresDevengados
+        this.alquileresDevengados = nuevoAlquileresDevengados
     }
 
 }
@@ -184,10 +184,17 @@ let monotributoE = new Monotributo ("Categoria E", "$ 1.400.000,00", "Hasta 110 
 
 
 const pedirDatos = () => {
-    
+
     let cat = prompt("Ingrese Su categoria de Monotributo: A, B, C, D, E").toUpperCase()
+
+    while(cat !== "A" && cat !== "B" && cat !== "C" && cat !== "D" && cat !== "E" ){
+        cat =  prompt("Ingrese correctamente su categoria de Monotributo: A, B, C, D, E").toLocaleUpperCase()
+    }console.log("Tu categoría es: " + cat)
+
     let monotributo = "monotributo" + cat
-    return "Datos según tu categoría: " + monotributo 
+
+
+    return console.log("Datos según tu categoría: " + monotributo ) 
     
 } 
 
