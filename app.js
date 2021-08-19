@@ -1,52 +1,5 @@
 /*
 
-//                                       INGRESO DE USUARIO
-//Ingreso de edad
-let edad = parseInt(prompt("Ingrese su edad"))
-
-while(edad <= 17){
-    
-    edad=parseInt(prompt("Usted es menor de edad, Ingrese nuevamente"))
-
-}alert("Ud es mayor de edad, puede ingresar")
-
-console.log(edad)
-
-//Ingreso de usuario
-let admin = prompt("Ingrese usuario").toLowerCase()
-
-while( admin !== "kaki" && admin !== "sofi"){
-    edad=prompt("Usted no es un admin").toLowerCase()
-}alert ("Bienvenido")
-
-console.log(admin)
-
-
-let pass = parseInt(prompt("Ingrese contraseña"))
-
-while(pass !== 160200){
-    pass = parseInt(prompt("Contraseña Incorrecta, Ingrese nuevamente")) 
-}alert("Ingreso Correcto")
-
-if ((admin === "kaki" && pass === 160200) || (admin === "sofi" && pass === 160200)){
-    console.log("Disfrute crack")
-}   
-
-switch(admin){
-    case "kaki":
-        alert("Bienvenido Kaki")
-        break
-    case "sofi":
-        alert("Bienvenida Sofi")
-    break
-
-    default:
-        alert("No sos un Admin")
-    break
-} 
-
-
-
 //calculos
 
 
@@ -71,13 +24,14 @@ console.log("La utilidad que tiene es de: $" + resultadoUtilidad)
 let espacio = "-".repeat(75);
 console.log(espacio)
 
-if(resultadoUtilidad > 0){
-    const menosIva = (resultado, iva21 ) => {
+const menosIva = (resultado, iva21 ) => {
 
         let resultadoMenosIva = resultado * iva21
         return resultadoMenosIva
     
     }
+if(resultadoUtilidad > 0){
+    
     let resultadoMenosIva1 = menosIva(resultadoUtilidad, 0.79)
     
     console.log("Tu beneficio final contando el impuesto al valor agregado [iva] es: $" + resultadoMenosIva1)
@@ -159,10 +113,10 @@ class Monotributo{
         this.supAfectada = nuevosSupAfectada
     }
     get obtenerEnergiaConsumidaAnual() {
-        return this.EnergiaConsumidaAnual
+        return this.energiaConsumidaAnual
     }
     set cambiarEnergiaConsumidaAnual(nuevoEnergiaConsumidaAnual) {
-        this.energiaConsumidaAnual = EnergiaConsumidaAnual
+        this.energiaConsumidaAnual = nuevoEnergiaConsumidaAnual
     }
     get obtenerAlquileresDevengados() {
         return this.alquileresDevengados
@@ -173,28 +127,34 @@ class Monotributo{
 
 }
 
-let monotributoA = new Monotributo ("Categoria A", "$ 370.000,00", "Hasta 30 m2", "Hasta 3330 Kw", "$ 105.916,77"  )
-let monotributoB = new Monotributo ("Categoria B", "$ 550.000,000", "Hasta 45 m2", "Hasta 5000 Kw", "$ 105.916,77"  )
-let monotributoC = new Monotributo ("Categoria C", "$ 770.000,00", "Hasta 60 m2", "Hasta 6700 Kw", "$ 211.833,52"   )
-let monotributoD = new Monotributo ("Categoria D", "$ 1.060.000,00", "Hasta 85 m2", "Hasta 10000 Kw", "$ 211.833,52")
-let monotributoE = new Monotributo ("Categoria E", "$ 1.400.000,00", "Hasta 110 m2", "Hasta 13000 Kw", "$ 263.951,28")
+const monotributos = []
 
+monotributos.push(new Monotributo ("Categoria A", "$ 370.000,00", "Hasta 30 m2", "Hasta 3330 Kw", "$ 105.916,77"  ))
+monotributos.push(new Monotributo ("Categoria B", "$ 550.000,000", "Hasta 45 m2", "Hasta 5000 Kw", "$ 105.916,77"  ))
+monotributos.push(new Monotributo ("Categoria C", "$ 770.000,00", "Hasta 60 m2", "Hasta 6700 Kw", "$ 211.833,52"   ))
+monotributos.push(new Monotributo ("Categoria D", "$ 1.060.000,00", "Hasta 85 m2", "Hasta 10000 Kw", "$ 211.833,52"))
+monotributos.push(new Monotributo ("Categoria E", "$ 1.400.000,00", "Hasta 110 m2", "Hasta 13000 Kw", "$ 263.951,28"))
+
+
+console.log(monotributos)
+
+let cat = prompt("Ingrese Su categoria de Monotributo: A, B, C, D, E").toUpperCase()
+
+let monotributoIngresado = "monotributo" + cat
 
 
 
 
 const pedirDatos = () => {
 
-    let cat = prompt("Ingrese Su categoria de Monotributo: A, B, C, D, E").toUpperCase()
-
     while(cat !== "A" && cat !== "B" && cat !== "C" && cat !== "D" && cat !== "E" ){
-        cat =  prompt("Ingrese correctamente su categoria de Monotributo: A, B, C, D, E").toLocaleUpperCase()
+        cat =  prompt("Ingrese correctamente su categoria de Monotributo: A, B, C, D, E").toUpperCase()
     }console.log("Tu categoría es: " + cat)
 
-    let monotributo = "monotributo" + cat
 
+    const monotributoBuscado = monotributos.find( (monotributo) => monotributo.tipo = monotributoIngresado )
 
-    return console.log("Datos según tu categoría: " + monotributo ) 
+    return console.log("Datos según tu categoría: ", monotributoBuscado)
     
 } 
 
