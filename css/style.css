@@ -1,0 +1,245 @@
+ *{
+    margin: 0;
+    padding: 0;
+    -wefkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+ }
+ main{
+    min-height: calc(100vh - 160px);
+    background-color: #ffffff;
+
+}
+
+
+h1{
+   text-align: center;
+   font-size: 36px;
+   color: #353535;
+   font-family: 'Conv_HouschkaHead-DemiBold', sans-serif;
+   font-style: normal;
+   margin: 30px;
+   line-height: 1.5;
+   display: flex;
+   justify-content: center;
+}
+h3{
+   text-align: center;
+   font-size: 36px;
+   color: #353535;
+   font-family: 'Conv_HouschkaHead-DemiBold', sans-serif;
+   font-style: normal;
+   margin: 30px;
+   line-height: 1.5;
+   display: flex;
+   justify-content: center;
+}
+h5{
+   color: #ef2e24;
+}
+ /*HEADER*/
+ .bloqueHeader{
+    background-color: #191919;
+    width: 100%;
+    height: 30px;
+ }
+ .header{
+    background-color: #ef2e24;
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: space-around;
+ }
+ .header__logo {
+      width: 200px;
+      height: 100%;
+      display: flex;
+      
+
+}
+.header__logo a{
+   width: 100%;
+}
+ .header__logo-imagen {
+   height: 100%;
+   width: 100%;
+
+}
+/*HEADER*/
+
+/*MENU DE NAVEGACIÓN*/
+.header__navegacion {
+   width: 700px;
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   align-items: center; 
+}
+.header__navegacion ul {
+   list-style: none; 
+}
+.header__navegación-menu {
+   display: flex;
+   justify-content: space-between;
+   width: 100%;
+   margin: 0%;
+   padding: 0%;
+}
+.header__navegación-menu li {
+   position: relative;
+   display: inline-block; 
+}
+ .header__navegación-menu li a {
+   width: 100%;
+   display: block;
+   padding: 15px 10px;
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
+   font-size: 1rem;
+   text-decoration: none;
+   color: aliceblue;
+}
+ 
+ .header__navegación-menu li a:hover {
+   background-color: #c52d2f;
+   transition: all .3s; 
+}
+ 
+ /*MENU DE NAVEGACIÓN*/
+
+/*BANNER*/
+.banner{
+   background-image: url(../img/¿Por\ qué\ es\ importante\ la\ Contabilidad\ de\ costos\ para\ las\ empresas.jpg);
+   width: 100%;
+   position: relative;
+   display: flex;
+   height: 400px;
+   background-position: center;
+   background-size: cover;
+   justify-content: center;
+   align-items: center;
+}
+
+.banner h2{
+   font-size: 4rem;
+   color: #191919;
+   padding: 10px;
+   text-align: center;
+   margin: 0px;
+}
+
+/*FIN BANNER*/
+
+.main__bloqueUno{
+   margin: 30px;
+   
+}
+
+
+.main__bloqueUno h1{
+   text-align: center;
+   font-size: 36px;
+   color: #353535;
+   font-family: 'Conv_HouschkaHead-DemiBold', sans-serif ;
+   font-style: normal;
+   margin: 10px;
+   line-height: 1.5;
+}
+.padreInicio{
+   display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+   justify-content: space-around;
+}
+
+.padreInicio__cajasInicio{
+   border-color: #e5e5e5 #e5e5e5 #e0e0e0 #e5e5e5;
+   min-height: 210px;
+   margin-bottom: 35px;
+   
+   overflow: hidden;
+   width: 30%;
+   background-color: white;
+   padding: 0px;
+   border: solid 1px #c8c7c7;
+   border-radius: 4px;
+   border-width: 1px 1px 4px 1px;
+   display: flex;
+   align-items: center;
+   
+}
+.padreInicio__cajasInicio p{
+   font-family: 'Conv_HouschkaHead-Light', sans-serif;
+   font-size: 18px;
+   line-height: 23px;
+   margin: 10px;
+   box-sizing: border-box;
+   text-align: left;
+   color: #4e4e4e;
+   font-style: normal;
+   font-weight: 400;
+}
+
+ /*FOOTER*/
+
+.footer{
+   background-color: #191919;
+}
+
+.footer__navegacion {
+   margin: auto;
+   right: initial;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   width: 30%;
+   height: 60px;
+   position: relative; 
+}
+.footer__navegacion ul {
+     list-style: none; 
+}
+.footer__navegacion-menu{
+   display: flex;
+   justify-content: space-around;
+   width: 100%;
+}
+ .footer__navegacion-menu li {
+   display: inline-block; 
+}
+ .footer__navegacion-menu li a {
+   padding: 15px 10px;
+   color: 353535;
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
+   text-decoration: none; 
+   color: aliceblue;
+}
+ 
+.footer__navegacion-menu li a:hover {
+   background-color: #293135;
+   transition: all .3s; 
+}
+ 
+ /*FOOTER*/
+
+ /*PRODUCTOS*/
+ .productos{
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   margin-right: 0;
+   margin-left: 0;
+   flex-wrap: wrap;
+ }
+
+.imagenProd{
+   height: 250px;
+ }
+ .padreCarrito{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+ }
+#carritoDeCompras{
+   width: 60%;
+}

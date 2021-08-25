@@ -1,4 +1,4 @@
-
+/*
 //                                       INGRESO DE USUARIO
 //Ingreso de edad
 let edad = parseInt(prompt("Ingrese su edad"))
@@ -43,3 +43,5 @@ switch(admin){
         alert("No sos un Admin")
     break
 } 
+
+*/

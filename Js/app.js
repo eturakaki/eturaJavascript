@@ -83,7 +83,7 @@ const pedirDatos = () => {
 
 console.log( pedirDatos())
 
-*/
+
 
 class Monotributo{
     constructor(tipo, ingresos, supAfectada, energiaConsumidaAnual, alquileresDevengados ){
@@ -159,3 +159,5 @@ const pedirDatos = () => {
 } 
 
 console.log( pedirDatos())
+*/
+
