@@ -237,9 +237,18 @@ h5{
  .padreCarrito{
     width: 100%;
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
     margin-top: 50px;
  }
 #carritoDeCompras{
    width: 60%;
+   background-color: #191919;
+   color: aliceblue;
 }
+#btn{
+   color: #fff;
+   background-color: #ef2e24;
+   border-color: #ef2e24;
+} 

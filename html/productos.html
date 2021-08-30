@@ -46,19 +46,35 @@
             <section id="contenedor" class=" container productos"></section>
             <h3>Carrito de compras</h3>
             <section class="padreCarrito">
-                <table class=" table table-dark table-sm " id="carritoDeCompras">
+                <table class=" table table-bordered table-sm " id="carritoDeCompras">
                     <thead>
                         <tr>
                           <th scope="col">ID</th>
                           <th scope="col">Nombre</th>
                           <th scope="col">Autor</th>
                           <th scope="col">Precio</th>
+                          <th scope="col">Total</th>
                         </tr>
                       </thead>
                       <tbody id="tableBody">
 
+                        
+                      </tbody>
+                      
+                      <tbody>
+                        <tr>
+                            <th>.</th>
+                            <th>.</th>
+                            <th>.</th>
+                            <th>.</th>
+                            <th id="total"></th>
+                        </tr>
                       </tbody>
                   </table>
+                  <div class="botonesCarrito">
+                    <button id="btnBorrar" type="button" class="btn btn-danger btn-sm">Borrar carrito</button>
+                    <button id="btnComprar"  type="button" class="btn btn-success btn-sm">Comprar</button>
+                  </div>
             </section>
         </main>
         <!-- Fin Main-->

@@ -17,7 +17,7 @@ stockProductos.forEach ((prod) => {
         <p class="card-text">${prod.desc}.</p>
         <p><strong class="card-text">${ "Precio: $" + prod.precio}</strong></p>
         
-        <button onclick="agregarAlCarrito(${prod.id})" class="btn btn-primary">Agregar al carrito</button>
+        <button id="btn" onclick="agregarAlCarrito(${prod.id})" class="btn btn-primary">Agregar al carrito</button>
       </div>
     `
 
@@ -25,8 +25,30 @@ stockProductos.forEach ((prod) => {
 })
 
 
-
 const carrito = []
+
+const mostrarCompra = () => {
+
+  tableBody.innerHTML = ""
+   
+  carrito.forEach((prod) =>{
+    const tr = document.createElement('tr')
+    tr.innerHTML = `
+             <th scope="row">${prod.id}</th>
+              <td>${prod.nombre}</td>
+              <td>${prod.autor}</td>
+              <td>${prod.precio}</td>
+
+
+             
+    `
+    tableBody.appendChild(tr)          
+  })
+
+}
+
+
+
 
 function agregarAlCarrito (prodId) {
   let producto = stockProductos.find( (el) => el.id === prodId )
@@ -36,20 +58,21 @@ function agregarAlCarrito (prodId) {
   mostrarCompra()
 }
 
-const mostrarCompra = () => {
+const botonBorrarCarrito = document.getElementById('btnBorrar')
+const botonComprarCarrito = document.getElementById('btnComprar')
 
-    tableBody.innerHTML = ""
-     
-    carrito.forEach((prod) =>{
-      const tr = document.createElement('tr')
-      tr.innerHTML = `
-               <th scope="row">${prod.id}</th>
-                <td colspan="2">${prod.nombre}</td>
-                <td>${prod.autor}</td>
-                <td>${prod.precio}</td>
-      `
-      tableBody.appendChild(tr)          
-    })
 
-}
+
+botonBorrarCarrito.addEventListener('click', () => {
+
+  tableBody.innerHTML = ""
+  carrito = []
+  
+
+} )
+
+botonComprarCarrito.addEventListener('click', () => {
+  
+    alert("Compraste el Carrito")
+} )
 
