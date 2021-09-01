@@ -41,51 +41,46 @@
         <hr>
         <!-- inicio Main-->
         <main class=>
-            <h1>Productos</h1>
+            <h1>CARRITOS DE COMPRA</h1>
             <hr>
-            <h4>Libros contabilidad</h4>
-            <section id="contenedor" class=" container productos"></section>
+             <!--INICIO CARRITO-->
+             <h3>Carrito de compras</h3>
+             <section class="padreCarrito">
+                 <table class=" table table-bordered table-sm " id="carritoDeCompras">
+                     <thead>
+                         <tr>
+                           <th scope="col">ID</th>
+                           <th scope="col">Nombre</th>
+                           <th scope="col">Autor</th>
+                           <th scope="col">Cantidad</th>
+                           <th scope="col">Precio</th>
+                           
+                         </tr>
+                       </thead>
+                       <tbody id="tableBody">
+ 
+                         
+                       </tbody>
+                       
+                       <tbody>
+                         <tr>
+                             <th>.</th>
+                             <th>.</th>
+                             <th>.</th>
+                             <th>.</th>
+                             <th id="total"></th>
+                         </tr>
+                       </tbody>
+                   </table>
+                   <div class="botonesCarrito">
+                     <button id="btnBorrar" type="button" class="btn btn-danger btn-sm">Borrar carrito</button>
+                     <button id="btnComprar"  type="button" class="btn btn-success btn-sm">Comprar</button>
+                   </div>
+             </section>
+         <!--FIN CARRITO-->
 
-        <!--INICIO CARRITO-->
-            <h3>Carrito de compras</h3>
-            <section class="padreCarrito">
-                <table class=" table table-bordered table-sm " id="carritoDeCompras">
-                    <thead>
-                        <tr>
-                          <th scope="col">#</th>
-                          <th scope="col">Nombre</th>
-                          <th scope="col">Autor</th>
-                          <th scope="col">Cantidad</th>
-                          <th scope="col">acción</th>
-                          <th scope="col">total</th>
-                          
-                        </tr>
-                      </thead>
-                      <tbody id="tableBody">
 
-                        
-                      </tbody>
-                      
-                      <tbody>
-                        <tr id="totalCarrito">
-                            <th scope="row" colspan="3">Total productos</th>
-                            <th></th>
-                            <td><button id="btnBorrar" type="button" class="btn btn-danger btn-sm">Borrar carrito</button></td>
-                            <td class="font-weight-bold">$ <span>5000</span></td>`
-                        </tr>
-                        <tfoot>
-                            <tr id="footerCarrito" style="background-color: #ef2e24;">
-                              <th scope="row" colspan="6">Carrito vacío - comience a comprar!</th>
-                            </tr>
-                          </tfoot>
-                      </tbody>
-                  </table>
-                  <div class="botonesCarrito">
-                    
-                    <button id="btnComprar"  type="button" class="btn btn-success btn-sm">Comprar</button>
-                  </div>
-            </section>
-        <!--FIN CARRITO-->
+        
         </main>
         <!-- Fin Main-->
         <hr>

@@ -8,20 +8,36 @@
  main{
     min-height: calc(100vh - 160px);
     background-color: #ffffff;
+    
 
 }
 
 
 h1{
+   height: 50px;
    text-align: center;
    font-size: 36px;
-   color: #353535;
+   color: #ffffff;
+   font-family: 'Conv_HouschkaHead-DemiBold', sans-serif;
+   font-style: normal;
+   margin-bottom: 30px;
+   line-height: 1.5;
+   display: flex;
+   justify-content: center;
+   background-image: url(https://adecco.cl/wp-content/uploads/bg-banners.jpg?id=36);
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
+}
+h4{
+   font-size: 36px;
+   color: #ef2e24;
    font-family: 'Conv_HouschkaHead-DemiBold', sans-serif;
    font-style: normal;
    margin: 30px;
    line-height: 1.5;
-   display: flex;
-   justify-content: center;
+   text-align: start;
+   justify-content: start;
 }
 h3{
    text-align: center;
@@ -222,15 +238,16 @@ h5{
  /*FOOTER*/
 
  /*PRODUCTOS*/
- .productos{
+
+ #contenedor{
    display: flex;
-   justify-content: space-between;
-   align-items: center;
+   justify-content: space-around;
    margin-right: 0;
    margin-left: 0;
+   margin-bottom: 50px;
    flex-wrap: wrap;
+   max-width: 100%;
  }
-
 .imagenProd{
    height: 250px;
  }
@@ -249,6 +266,15 @@ h5{
 }
 #btn{
    color: #fff;
-   background-color: #ef2e24;
+   background-image: url(https://adecco.cl/wp-content/uploads/bg-banners.jpg?id=36);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
    border-color: #ef2e24;
 } 
+#btnBorrar{
+   background-color: #ef2e24
+}
+#botonBorrar{
+   background-color: #ef2e24;
+}
