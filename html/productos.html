@@ -44,6 +44,21 @@
             <h1>Productos</h1>
             <hr>
             <h4>Libros contabilidad</h4>
+            <select id="autores">
+                <option value="all">Todos</option>
+                <option value="Enrique Fowler Newton">Enrique Fowler Newton</option>
+                <option value="Oriol Amat">Oriol Amat</option>
+                <option value="César Oceda Samaniego">César Oceda Samaniego</option>
+                <option value="Antonio Manzanera">Antonio Manzanera</option>
+                <option value="VEGA">VEGA</option>
+                <option value="Dawn Fotopulos">Dawn Fotopulos</option>
+                <option value="Tom Rath">Tom Rath</option>
+            </select>
+            <select id="precios">
+                <option value="0">Todos</option>
+                <option value="1">0 - 3500</option>
+                <option value="2">+ 3500</option>
+            </select>
             <section id="contenedor" class=" container productos"></section>
 
         <!--INICIO CARRITO-->
@@ -68,10 +83,7 @@
                       
                       <tbody>
                         <tr id="totalCarrito">
-                            <th scope="row" colspan="3">Total productos</th>
-                            <th></th>
-                            <td><button id="btnBorrar" type="button" class="btn btn-danger btn-sm">Borrar carrito</button></td>
-                            <td class="font-weight-bold">$ <span>5000</span></td>`
+                            
                         </tr>
                         <tfoot>
                             <tr id="footerCarrito" style="background-color: #ef2e24;">
