@@ -8,13 +8,19 @@
  main{
     min-height: calc(100vh - 160px);
     background-color: #ffffff;
+    background-image: url(../img/fondo-papel-acuarela-blanco_88281-3969.jpg)
     
 
 }
-
+hr{
+   background-image: url(../img/fondo-papel-acuarela-blanco_88281-3969.jpg);
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
+}
 
 h1{
-   height: 50px;
+   height: 80px;
    text-align: center;
    font-size: 36px;
    color: #ffffff;
@@ -24,6 +30,7 @@ h1{
    line-height: 1.5;
    display: flex;
    justify-content: center;
+   align-items: center;
    background-image: url(https://adecco.cl/wp-content/uploads/bg-banners.jpg?id=36);
    background-position: center;
    background-repeat: no-repeat;
@@ -251,6 +258,11 @@ h5{
 .imagenProd{
    height: 250px;
  }
+ .card-img-top {
+   width: 200px;
+   height: 200px;
+   align-self: center;
+ }
  .padreCarrito{
     width: 100%;
     display: flex;
@@ -264,7 +276,7 @@ h5{
    background-color: #191919;
    color: aliceblue;
 }
-#btn{
+.botonAgregarCarrito{
    color: #fff;
    background-image: url(https://adecco.cl/wp-content/uploads/bg-banners.jpg?id=36);
     background-position: center;
@@ -272,9 +284,81 @@ h5{
     background-size: cover;
    border-color: #ef2e24;
 } 
-#btnBorrar{
-   background-color: #ef2e24
+
+.shoppingCartItemsContainer{
+   border-radius: 10px;
+   
+   background:seashell;
+   opacity: 0,8;
+   text-align: center;
+	background-position: center center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	position: relative;
 }
-#botonBorrar{
-   background-color: #ef2e24;
+.row{
+  margin: 10px;
+  max-width: 100%;
 }
+.item {
+   border: 2px solid #000;
+   padding: 10px;
+   border-radius: 20px;
+ }
+ 
+ .item-title {
+   text-transform: uppercase;
+   text-align: center;
+   font-weight: 600;
+ }
+ 
+ .item-image {
+   height: 300px;
+   width: 100%;
+ }
+ 
+ .item-details {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   margin: 20px 0px 15px;
+ }
+ 
+ .item-details > .item-price {
+   margin: 0;
+ }
+ /* CARRITO */
+ .buttonDelete{
+   display: flex;
+   align-items: center;
+ }
+ .shopping-cart-items {
+   padding: 20px 0px;
+ }
+ 
+ .shopping-cart-header {
+   border-bottom: 1px solid #ccc;
+ }
+ .shopping-cart-image{
+   max-width: 80px;
+   border-radius: 20px;
+   margin-right: 4px;
+}
+.shopping-cart-quantity{
+   align-items: center;
+}
+ .shopping-cart-quantity-input {
+   max-width: 45px;
+   border: 1px solid #ccc;
+   border-radius: 5px;
+   background: #eee;
+   padding: 5px;
+ }
+ 
+ .shopping-cart-total {
+   min-height: 96px;
+   padding: 50px;
+ }
+
+ /*MODALES*/
+ 

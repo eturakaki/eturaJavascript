@@ -2,8 +2,7 @@
 
 const contenedor = document.getElementById("contenedor");
 const tableBody = document.getElementById("tableBody");
-const botonBorrarCarrito = document.getElementById('btnBorrar');
-const botonComprarCarrito = document.getElementById('btnComprar');
+
 const botonBorrar = document.getElementById('botonBorrar');
 const botonAniadir = document.getElementById('botonAniadir');
 const footerCarrito = document.getElementById('footerCarrito');
@@ -51,14 +50,14 @@ function agregarAlCarrito (prodId) {
 
     if(carrito.hasOwnProperty(producto.id)){
       producto.cantidad = carrito[producto.id].cantidad + 1
+      
+      
     }
-
-    carrito[producto.id] = {...producto}
-    console.log(carrito.length)
-    console.log(carrito)
   }else{
     alert("No hay stock")
   }
+  carrito.push(producto)
+
   localStorage.setItem('carrito', JSON.stringify(carrito))
 
 
@@ -75,15 +74,7 @@ const actualizarCarrito = () => {
     
     const tr = document.createElement('tr')
     tr.innerHTML = `
-             <th scope="row">${producto.id}</th>
-              <td>${producto.nombre}</td>
-              <td>${producto.autor}</td>
-              <td>${producto.cantidad}</td>
-              <td>
-              <button type="button" class="btn btn-success  " id="botonAniadir" onclick=aniadirProducto(${producto.id})>+</button>
-              <button type="button" class="btn btn-danger" onclick=eliminarProducto(${producto.id})></button>
-              </td>
-              <td>${"$ " + producto.precio * producto.cantidad}</td>
+             
 
 
              
@@ -176,13 +167,16 @@ selectPrecios.addEventListener('change', () => {
   filtrar()
 })
 
-
+const botonBorrarCarrito = document.getElementById('btnBorrar');
+const botonComprarCarrito = document.getElementById('btnComprar');
 
 botonBorrarCarrito.addEventListener('click', () => {
 
   carrito = []
   tableBody.innerHTML = ''
-  actualizarCarrito()
+  totalCarrito.querySelectorAll('th')[1].textContent = 0
+  totalCarrito.querySelectorAll('td')[1].textContent = 0
+  agregarAlCarrito()
   
   
 
@@ -191,5 +185,7 @@ botonComprarCarrito.addEventListener('click', () => {
 
   alert("Compraste el Carrito")
   tableBody.innerHTML = ''
-  actualizarCarrito()
+  totalCarrito.querySelectorAll('th')[1].textContent = 0
+  totalCarrito.querySelectorAll('td')[1].textContent = 0
+  agregarAlCarrito()
 } )
