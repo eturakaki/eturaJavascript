@@ -5,6 +5,7 @@ const selectPrecios = document.getElementById('precios')
 const contadorCarrito = document.getElementById('contadorCarrito')
 let carrito = [];
 
+
 mostrarProductos(stockProductos)
 
 function mostrarProductos (array){
@@ -132,6 +133,7 @@ function addItemToShoppingCart(itemTitle, itemPrice, itemImage){
 
 function updateShoppingCartTotal(){
 
+   
 
     let total = 0;
 
@@ -157,8 +159,8 @@ function updateShoppingCartTotal(){
         
     })
     shoppingCartTotal.innerHTML = `$${total.toFixed(2)}`
-    
-    const divs = document.getElementsByClassName("cardCart").length;
+
+    let divs = document.getElementsByClassName("shoppingCartItemQuantity").length;
 
     contadorCarrito.innerText = divs
     
