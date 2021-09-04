@@ -2,6 +2,7 @@
 const contenedor = document.getElementById("contenedor");
 const selectAutores = document.getElementById('autores');
 const selectPrecios = document.getElementById('precios')
+const contadorCarrito = document.getElementById('contadorCarrito')
 let carrito = [];
 
 mostrarProductos(stockProductos)
@@ -51,6 +52,7 @@ comprarButton.addEventListener('click', () => {
 const shoppingCartItemsContainer = document.querySelector('.shoppingCartItemsContainer');
 
 
+
 function addToCartClick(event){
     const button = event.target;
     const item = button.closest('.item')
@@ -88,6 +90,7 @@ function addItemToShoppingCart(itemTitle, itemPrice, itemImage){
     }
     
     const shoppingCartRow = document.createElement('div');
+    shoppingCartRow.className = "cardCart"
     const shoppingCartContent = `
                     <div class="row shoppingCartItem">
                             <div class="col-6">
@@ -123,7 +126,9 @@ function addItemToShoppingCart(itemTitle, itemPrice, itemImage){
     shoppingCartRow.querySelector('.shoppingCartItemQuantity').addEventListener('change', quantityChanged)
 
     updateShoppingCartTotal()
+    
 }
+
 
 function updateShoppingCartTotal(){
 
@@ -152,7 +157,15 @@ function updateShoppingCartTotal(){
         
     })
     shoppingCartTotal.innerHTML = `$${total.toFixed(2)}`
+    
+    const divs = document.getElementsByClassName("cardCart").length;
+
+    contadorCarrito.innerText = divs
+    
 }
+ 
+
+
 
 function removeShoppingCartItem(event) {
 
@@ -207,4 +220,7 @@ function filtrar() {
   selectPrecios.addEventListener('change', () => {
     filtrar()
   })
+
+  
+
 

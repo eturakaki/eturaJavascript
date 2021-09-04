@@ -361,4 +361,15 @@ h5{
  }
 
  /*MODALES*/
- 
+ #boton-carrito{
+    position: fixed;
+    width: 55px;
+    height: 55px;
+    line-height: 55px;
+    bottom: 55px;
+    right: 30px;
+    background: #ef2e24;
+    color: white;
+    border-radius: 50px;
+    text-align: center;
+ }
