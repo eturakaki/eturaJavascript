@@ -86,7 +86,7 @@ h5{
  .header__logo-imagen {
    height: 100%;
    width: 100%;
-
+   
 }
 /*HEADER*/
 
@@ -374,3 +374,6 @@ h5{
     border-radius: 50px;
     text-align: center;
  }
+#carroUpdate{
+   display: none;
+}

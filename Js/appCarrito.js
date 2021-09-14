@@ -3,6 +3,8 @@ const contenedor = document.getElementById("contenedor");
 const selectAutores = document.getElementById('autores');
 const selectPrecios = document.getElementById('precios')
 const contadorCarrito = document.getElementById('contadorCarrito')
+const carroUpdate = document.getElementById('boton-carrito')
+
 let carrito = [];
 
 
@@ -72,7 +74,7 @@ function addToCartClick(event){
         
     }
     
-
+    
 }
 
 
@@ -134,6 +136,7 @@ function addItemToShoppingCart(itemTitle, itemPrice, itemImage){
 function updateShoppingCartTotal(){
 
    
+    
 
     let total = 0;
 
@@ -158,14 +161,37 @@ function updateShoppingCartTotal(){
         total = total + shoppingCartItemPrice * shoppingCartItemQuantity;
         
     })
-    shoppingCartTotal.innerHTML = `$${total.toFixed(2)}`
+    shoppingCartTotal.innerHTML = `${total.toFixed(2)}`
 
     let divs = document.getElementsByClassName("shoppingCartItemQuantity").length;
 
-    contadorCarrito.innerText = divs
+    contadorCarrito.innerText = parseInt(divs)
+    
+    pintarContador()
+    
+    
+    
     
 }
- 
+function pintarContador(){
+
+    const cantidad = parseInt($('#contadorCarrito').text())
+    let a = Math.round( Math.random() * cantidad * 30)
+    let b = Math.round( Math.random() * cantidad * 30)
+    let c = Math.round( Math.random() * cantidad * 30)
+    
+    if(cantidad === 0){
+        $('#carroUpdate').hide()
+
+    }else
+    $('#carroUpdate').show()
+    $('#boton-carrito').css({
+        "opacity" : parseInt(cantidad),
+        "background" : `rgb(${b}, ${a}, ${c})`
+    })
+
+}
+
 
 
 
@@ -224,5 +250,3 @@ function filtrar() {
   })
 
   
-
-
