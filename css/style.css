@@ -7,10 +7,13 @@
  }
  main{
     min-height: calc(100vh - 160px);
-    background-color: #ffffff;
-    background-image: url(../img/fondo-papel-acuarela-blanco_88281-3969.jpg)
     
 
+}
+body{
+   background-color: #ffffff;
+    background-image: url(../img/fondo-papel-acuarela-blanco_88281-3969.jpg)
+    
 }
 hr{
    background-image: url(../img/fondo-papel-acuarela-blanco_88281-3969.jpg);
@@ -20,13 +23,14 @@ hr{
 }
 
 h1{
-   height: 80px;
+   height: 250px;
    text-align: center;
-   font-size: 36px;
+   font-size: 80px;
    color: #ffffff;
    font-family: 'Conv_HouschkaHead-DemiBold', sans-serif;
    font-style: normal;
-   margin-bottom: 30px;
+   margin: 30px;
+   border-radius: 15px;
    line-height: 1.5;
    display: flex;
    justify-content: center;
@@ -162,7 +166,7 @@ h4{
 .main__bloqueUno h1{
    text-align: center;
    font-size: 36px;
-   color: #0e0d0d;
+   color: #ffffff;
    font-family: 'Conv_HouschkaHead-DemiBold', sans-serif ;
    font-style: normal;
    margin: 10px;
