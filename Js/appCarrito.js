@@ -48,8 +48,13 @@ aniadirACarritoBotones.forEach(addToCartButton => {
 })
 
 const comprarButton = document.querySelector('.comprarButton')
+
 comprarButton.addEventListener('click', () => {
+
+    
+
     comprarButtonClicked()
+
 })
 
 const shoppingCartItemsContainer = document.querySelector('.shoppingCartItemsContainer');
@@ -208,16 +213,34 @@ function quantityChanged (event) {
 
     const shoppingCartItemQuantity = event.target;
 
-    shoppingCartItemQuantity.value <= 0 ? (shoppingCartItemsContainer.innerHTML= '') : null;
 
+    if(shoppingCartItemQuantity.value <= 0){
+
+        shoppingCartItemQuantity.parentElement.parentElement.parentElement.parentElement.remove()
+        updateShoppingCartTotal()
+        
+    }else
 
     updateShoppingCartTotal()
 
 }
 function comprarButtonClicked () {
+    let totalAComprar = parseInt($('.shoppingCartTotal').text())
+    
+
+    if(totalAComprar <= 0){
+        $('#comprarModalLabel').text("No hay nada en el carrito")
+        $('.modal-body').children('p').text("Selecciona algo dentro del carrito")
+        
+    }else{
+    $('#comprarModalLabel').text("Gracias por la compra")
+    $('.modal-body').children('p').text("Pronto recibirá su pedido")
     shoppingCartItemsContainer.innerHTML = '';
+    
+    }
     updateShoppingCartTotal();
 }
+
 
 
 function filtrar() {

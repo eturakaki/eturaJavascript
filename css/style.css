@@ -57,8 +57,9 @@ h3{
    display: flex;
    justify-content: center;
 }
-h5{
+h4{
    color: #ef2e24;
+   text-align: center;
 }
  /*HEADER*/
  .bloqueHeader{
@@ -161,7 +162,7 @@ h5{
 .main__bloqueUno h1{
    text-align: center;
    font-size: 36px;
-   color: #353535;
+   color: #0e0d0d;
    font-family: 'Conv_HouschkaHead-DemiBold', sans-serif ;
    font-style: normal;
    margin: 10px;
@@ -376,4 +377,91 @@ h5{
  }
 #carroUpdate{
    display: none;
+}
+.filtros{
+   display: flex;
+   flex-direction: row;
+   padding: 30px;
+}
+
+/*APP DOLAR----------------------------------------------------------------------*/
+#caja-dolar{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   
+}
+.cotizaciones-ar{
+   width: 100%;
+}
+
+table.cotizaciones-ar {
+   border: 0;
+   border-collapse: collapse;
+   margin-bottom: 40px;
+   width: 70%;
+   table-layout: fixed;
+}
+
+   table.cotizaciones-ar th, table.cotizaciones-ar td {
+       font-size: 1.2em;
+       padding: 20px;
+   }
+
+   table.cotizaciones-ar th {
+       background-color: #ef2e24;
+       border: 0;
+       border-bottom: 3px solid transparent;
+       color: #FFFFFF;
+       font-size: 1.2em;
+       font-weight: 700;
+       text-align: right;
+   }
+
+   /* datatables extra begin */
+   table.cotizaciones-ar thead th {
+       border-bottom: none;
+   }
+
+.dataTables_filter label {
+   position: relative;
+   top: -10px;
+}
+
+table.dataTable thead th {
+   position: relative;
+   background-image: none !important;
+}
+
+   table.dataTable thead th.sorting:after,
+   table.dataTable thead th.sorting_asc:after,
+   table.dataTable thead th.sorting_desc:after {
+       position: absolute;
+       top: 12px;
+       right: 2px;
+       display: block;
+       font-family: "Font Awesome 5 Free";
+   }
+
+   table.dataTable thead th.sorting:after {
+       content: "\f0dc";
+       color: #FFF;
+       font-size: 0.8em;
+       padding-top: 0;
+   }
+
+   table.dataTable thead th.sorting_asc:after {
+       color: #FFF;
+       content: "\f0de";
+       font-size: 0.8em;
+   }
+
+   table.dataTable thead th.sorting_desc:after {
+       color: #FFF;
+       content: "\f0dd";
+       font-size: 0.8em;
+   }
+
+#caja-valoresDolar tr{
+   border-bottom: 1px solid black;
 }

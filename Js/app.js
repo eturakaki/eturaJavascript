@@ -1,45 +1,4 @@
 /*
-
-//calculos
-
-
-const utilidad = (costo, beneficios) => {
-
-    let resultado = beneficios - costo;
-    
-    return resultado
-}
-
-
-let costo1 = parseInt(prompt("Ingrese el costo total"));
-
-let beneficios1 = parseInt(prompt("Ingrese los ingresos totales"));
-
-let resultadoUtilidad = utilidad (costo1 , beneficios1)
-
-console.log("Los costos que tiene son de: $" + costo1)
-console.log("Los beneficios que obtuvo es de: $" + beneficios1)
-console.log("La utilidad que tiene es de: $" + resultadoUtilidad)
-
-let espacio = "-".repeat(75);
-console.log(espacio)
-
-const menosIva = (resultado, iva21 ) => {
-
-        let resultadoMenosIva = resultado * iva21
-        return resultadoMenosIva
-    
-    }
-if(resultadoUtilidad > 0){
-    
-    let resultadoMenosIva1 = menosIva(resultadoUtilidad, 0.79)
-    
-    console.log("Tu beneficio final contando el impuesto al valor agregado [iva] es: $" + resultadoMenosIva1)
-    
-}else{
-    alert("Tu utilidad es negativa")
-}
-
 //Intereses de plazos fijos 30 días
 
 alert("rendimientos de plazo fijo")
