@@ -1,4 +1,5 @@
 
+const padrecarts = document.getElementsByClassName("padre-carts")
 let datos = []
 const datosCripto = "https://criptoya.com/api/binancep2p/buy/dai/ars/20"
 
@@ -11,7 +12,7 @@ $.get("https://www.dolarsi.com/api/api.php?type=valoresprincipales", (response, 
   
 
   datos.forEach( (element) => {
-    console.log(element.casa)
+    
     $('#caja-valoresDolar').append(`
                               <tr>
                               <td class="colNombre">
@@ -38,3 +39,32 @@ $.get("https://www.dolarsi.com/api/api.php?type=valoresprincipales", (response, 
     `)
   });
 })
+
+mostrarProductos(bancos)
+
+function mostrarProductos (array){
+    nuevoArray(array)
+}
+
+
+function nuevoArray(array) {
+    const infoBanco = []
+
+    array.forEach( (elemento) => {
+        return infoBanco.push(elemento.banco)   
+  })
+  infoApi(infoBanco)
+  
+}
+
+function infoApi (array) {
+    padrecarts.innerHTML = ''
+    console.log(array)
+    array.forEach( (element) => {
+        fetch("${elemento[0]}")
+            .then((res) => res.json())
+            .then((data) =>{
+                console.log(data)
+            })
+    });
+}

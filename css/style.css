@@ -136,23 +136,28 @@ h4{
 
 /*BANNER*/
 .banner{
-   background-image: url(../img/¿Por\ qué\ es\ importante\ la\ Contabilidad\ de\ costos\ para\ las\ empresas.jpg);
+   
    width: 100%;
    position: relative;
    display: flex;
-   height: 400px;
+   height: 500px;
+   background: #000000;
+   background: -webkit-linear-gradient(to right, #434343a8, #0000009a), url(../img/¿Por\ qué\ es\ importante\ la\ Contabilidad\ de\ costos\ para\ las\ empresas.jpg);
+   background: linear-gradient(to right, #434343a1, #0000007e), url(../img/¿Por\ qué\ es\ importante\ la\ Contabilidad\ de\ costos\ para\ las\ empresas.jpg);
+   background-position: fixed;
    background-position: center;
    background-size: cover;
    justify-content: center;
    align-items: center;
 }
-
 .banner h2{
-   font-size: 4rem;
-   color: #191919;
-   padding: 10px;
-   text-align: center;
-   margin: 0px;
+   font-family: 'PT Serif', serif;
+    font-style: italic;
+    font-size: 4rem;
+    color: rgba(255, 255, 255, 0.877);
+    padding: 10px;
+    text-align: center;
+    margin: 0px;
 }
 
 /*FIN BANNER*/

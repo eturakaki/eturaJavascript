@@ -10,3 +10,27 @@ let stockProductos = [
     {id: 9, cantidad: 1, nombre: "Contabilidad para numerofóbicos", tipo: "Libro", desc: " guía de supervivencia para propietarios", precio: 3780, autor: "Dawn Fotopulos", stock: 15, img: "../img_stock/9.jpg" },
     {id: 10, cantidad: 1, nombre: "La ciencia del bienestar", tipo: "Libro", desc: "Los 5 elementos esenciales", precio: 7000, autor: "Tom Rath", stock: 0, img: "../img_stock/10.jpg" },
 ]
+
+let bancos = [
+     {banco : "https://criptoya.com/api/bbva"},
+    {banco : "https://criptoya.com/api/ciudad"},
+    {banco : "https://criptoya.com/api/galicia"},
+    {banco : "https://criptoya.com/api/hsbc"},
+    {banco : "https://criptoya.com/api/macro"},
+    {banco : "https://criptoya.com/api/bna"},
+    {banco : "https://criptoya.com/api/patagonia"},
+    {banco : "https://criptoya.com/api/bapro"},
+    {banco : "https://criptoya.com/api/santander"},
+    {banco : "https://criptoya.com/api/supervielle"},
+    {banco : "https://criptoya.com/api/brubank"},
+    {banco : "https://criptoya.com/api/buendolar"},
+    {banco : "https://criptoya.com/api/cambioposadas"},
+    {banco : "https://criptoya.com/api/cambiosroca"},
+    {banco : "https://criptoya.com/api/davsa"},
+    {banco : "https://criptoya.com/api/dolariol"},
+    {banco : "https://criptoya.com/api/naranjax"},
+    {banco : "https://criptoya.com/api/plus"},
+    {banco : "https://criptoya.com/api/prex"},
+    {banco : "https://criptoya.com/api/rebanking"},
+    {banco : "https://criptoya.com/api/tiendadolar"},
+]
