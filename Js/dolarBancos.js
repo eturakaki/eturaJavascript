@@ -1,6 +1,7 @@
 
 const padrecarts = document.getElementById("padre-carts")
 
+
 mostrarProductos(bancos)
 
 function mostrarProductos (array){
@@ -14,11 +15,13 @@ function mostrarProductos (array){
         
         
             padrecarts.innerHTML += `
-                                        <div class="card " style="width: 18rem;">
+                                        <div class="card" style="width: 18rem;">
                                             <div class="card-body">
                                             <h5 class="card-title"> ${element.nombre}</h5>
                                             <p class="card-text">.</p>
+                                            <div class="cantidadCarts">
                                             <a href="#" class="btn btn-primary valordolar"> Compra:</a>
+                                            </div>
                                             </div>
                                     </div>
                                     `
@@ -45,25 +48,28 @@ function nuevoArray(array) {
 }
 
 function infoApi (array) {
-    
+    let divs = document.getElementsByClassName("cantidadCarts");
+    let lengthDivs = divs.length
 
+    console.log( lengthDivs)
+    console.log(divs[2].children[0].innerHTML)
+    
     array.forEach( (element) => {
-        console.log(element)
 
         fetch(element)
             .then((res) => res.json())
-            .then((data) =>{
-                console.log(data.totalAsk)
-
-                let length = data.length;
-
+            .then((data) =>{ 
                 console.log(data)
-
-                for (let i = 0; i <= ; i++){
-                console.log(1)
+                
+                
+               
+                for (let i = 0; i <= lengthDivs ; i++){
+                    
+                    //divs[i].children[0].innerHTML= data.totalAsk
+                    
                 }
 
-                $('.valordolar').text(data.totalAsk)
+                
                 
             })
 
